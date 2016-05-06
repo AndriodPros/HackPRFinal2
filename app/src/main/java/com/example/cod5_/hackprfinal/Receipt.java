@@ -69,6 +69,6 @@ public class Receipt
 	public void Create_Recepit(); //Creates new instance of Recepit in the customer array
 	public void Display_All_Orders(); //Displays All of the orders from today
 	public void Reports(); //Sums up the total list of Orders revenues and clears the Customer array
-}*/
+}rr*/
 
 
