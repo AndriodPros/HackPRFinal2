@@ -10,23 +10,88 @@ import java.util.ArrayList;
 public class Receipt
 {
 	float Sub_Total;
+    float Tip;
 	String Name_Waiter;
 	int Table_ID;
 	int Recibo_ID;
 	ArrayList<Menu_Items> Orden;
 	Boolean Paid;
-	String Time_Paid; 
+	String Time_Paid;
+    String final_Receipt;
+    float final_Tax;
+    final float tax = 0.115f;
 
-	public Receipt(){}
-	public void Interactive_Menu(){} //displays the menu of available items with the option of adding items
-	public void Add_Item(){} //Stores whatever value was chosen on the Menu and adds it to the order
-	public void	Delete_Item(){} //Remove previously Item from recepit
-	public void Modify_Item(){} //Modies or exchanges in current receipt
 
-	public float Calculate_Tax(){return 0.0f;} //Calculates the Tax for the current SubTotal
-	public float Calculate_Tip(){return 0.0f;} //Adds tip to the current order
-	public float Final_Total(){return 0.0f;} //Adds up everything for final total
-	public void Print_Receipt(){} //Prints th Receipt with Final Total, list of oders and other identifiers.
+	public Receipt(float Sub_Total, String Name_Waiter, int Table_ID, int Recibo_ID, ArrayList<Menu_Items> Orden, Boolean Paid, String Time_Paid){
+
+        this.Sub_Total = Sub_Total;
+		this.Name_Waiter = Name_Waiter;
+		this.Table_ID = Table_ID;
+		this.Recibo_ID = Recibo_ID;
+		this.Orden = Orden;
+		this.Paid = Paid;
+		this.Time_Paid = Time_Paid;
+        this.Tip = 0.0f;
+        this.final_Tax = 0.0f;
+        this.final_Receipt = "";
+	}
+	public void Interactive_Menu(){
+
+    } //displays the menu of available items with the option of adding items
+
+    public void Add_Item(Menu_Items item){
+        Orden.add(item);
+    } //Stores whatever value was chosen on the Menu and adds it to the order
+
+	public void	Delete_Item(Menu_Items item){
+       for(int i = 0; i < this.Orden.size(); i++){
+           if(this.Orden.get(i).getName() == item.getName()){
+               this.Orden.remove(i);
+               break;
+           }
+       }
+    } //Remove previously Item from recepit
+
+	public void Modify_Item(Menu_Items item, Menu_Items change){
+        for(int i = 0; i < this.Orden.size(); i++){
+            if(this.Orden.get(i).getName() == item.getName()){
+                this.Orden.set(i,change);
+                break;
+            }
+        }
+    } //Modies or exchanges in current receipt
+
+	public float Calculate_Tax(){
+        this.final_Tax = (this.Sub_Total * this.tax);
+        return (this.Sub_Total * this.tax);
+    } //Calculates the Tax for the current SubTotal
+
+	public float Calculate_Tip(float tip){
+        this.Tip = (this.Sub_Total * (tip/100.0f));
+        return (this.Sub_Total * (tip/100.0f));
+    } //Adds tip to the current order
+
+	public float Final_Total(){
+        return this.Sub_Total + this.Tip + this.final_Tax;
+    } //Adds up everything for final total
+
+	public String Print_Receipt(){
+
+        this.final_Receipt = "---------------------------\n"
+                             +" " + this.Name_Waiter + ", Table: " + this.Table_ID + "\n";
+        for(int i = 0; i < this.Orden.size(); i++){
+            this.final_Receipt += this.Orden.get(i).Name + " " + this.Orden.get(i).Price + "$\n";
+        }
+
+        this.final_Receipt += "SubTotal: " + this.Sub_Total + "$\n"
+                           + "Tax: " + this.final_Tax + "$\n"
+                           + "Tip: " + this.Tip + "$\n"
+                           + "Total: " + Final_Total() + "$\n"
+                           + "---------------------------";
+
+        return this.final_Receipt;
+
+    } //Prints th Receipt with Final Total, list of oders and other identifiers.
 }
 
 /*
@@ -69,6 +134,6 @@ public class Receipt
 	public void Create_Recepit(); //Creates new instance of Recepit in the customer array
 	public void Display_All_Orders(); //Displays All of the orders from today
 	public void Reports(); //Sums up the total list of Orders revenues and clears the Customer array
-}rr*/
+}rrr*/
 
 
