@@ -38,7 +38,7 @@ public class Menu_Organizer extends Menu_Items {
     } // Adds new category on the categories array
 
 //    <<<<<<<HEAD
-//
+// a
 //   public void Delete_Menu_Item() {
 //
 //        =======
