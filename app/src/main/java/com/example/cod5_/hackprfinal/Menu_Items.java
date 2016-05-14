@@ -10,6 +10,14 @@ public class Menu_Items {
     float Price = 0.0f;
     String Category = "";
 
+    public Menu_Items(String name, String category, String description, float price)
+    {
+        this.setName(name);
+        this.setCategory(category);
+        this.setDescription(description);
+        this.setPrice(price);
+    }
+
     public void setName(String name){
         this.Name = name;
     }

@@ -9,6 +9,10 @@ import android.widget.Button;
 public class Waiter extends AppCompatActivity {
     private Button btnIntMenu;
     private Button btnDisplayOrder;
+    Intent i = getIntent();
+    public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+    public Manager manager = (Manager) i.getParcelableExtra("Manager");
+
 
     public void onclick() {
         btnIntMenu = (Button) findViewById(R.id.btnInterMenu);

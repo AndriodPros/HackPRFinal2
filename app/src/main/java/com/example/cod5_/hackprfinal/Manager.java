@@ -1,11 +1,12 @@
 package com.example.cod5_.hackprfinal;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by cod5_ on 5/6/2016.
  */
-public class Manager
+public class Manager implements Serializable
 {
     ArrayList<Receipt> Customers; //list of all of the customers of this day
     int tables; //number of tables in the restaurant
