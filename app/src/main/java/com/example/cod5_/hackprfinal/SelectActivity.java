@@ -1,5 +1,6 @@
 package com.example.cod5_.hackprfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,11 +11,16 @@ import android.widget.ListView;
 
 public class SelectActivity extends AppCompatActivity {
     private static String [] items;
+    Intent i = getIntent();
+    public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+    public Manager manager = (Manager) i.getParcelableExtra("Manager");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu2);
         String [] menuItems = items;
+
 
         final ListAdapter menuAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, menuItems);
         ListView menuListView = (ListView) findViewById(R.id.menuListView);

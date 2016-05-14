@@ -1,5 +1,6 @@
 package com.example.cod5_.hackprfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -7,6 +8,10 @@ import android.widget.Button;
 public class MenuMod extends AppCompatActivity {
     private Button btnAddMenu;
     private Button btnModMenu;
+    Intent i = getIntent();
+    public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+    public Manager manager = (Manager) i.getParcelableExtra("Manager");
+
 
 //    public void onclick() {
 //        btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
