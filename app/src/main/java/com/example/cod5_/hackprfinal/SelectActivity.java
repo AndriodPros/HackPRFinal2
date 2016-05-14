@@ -12,8 +12,8 @@ import android.widget.ListView;
 public class SelectActivity extends AppCompatActivity {
     private static String [] items;
     Intent i = getIntent();
-    public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
-    public Manager manager = (Manager) i.getParcelableExtra("Manager");
+    //public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+    //public Manager manager = (Manager) i.getParcelableExtra("Manager");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
