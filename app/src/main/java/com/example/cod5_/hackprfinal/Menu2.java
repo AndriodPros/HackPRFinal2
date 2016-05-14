@@ -44,7 +44,7 @@ public class Menu2 extends AppCompatActivity {
                         startActivity(tempMenu);
                         break;
                     case 4:
-                        String [] dessert = {"Ice Cream - 9.55$", "Chocolate Cake - 11.00$", "Vanilla Cake - 14.75$", "Diabetus - 20.00$"};
+                        String [] dessert = {"Ice Cream - 9.55$", "Chocolate Cake - 11.00$", "Vanilla Cake - 14.75$"};
                         SelectActivity.stringArray(dessert);
                         startActivity(tempMenu);
                         break;
