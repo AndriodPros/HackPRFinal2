@@ -9,4 +9,10 @@
     <string name="btnmodify_menu_item">Modify Menu Item</string>
     <string name="btnadd_new_menu_item">Add New Menu Item</string>
     <string name="textmenu_options">Menu Options:</string>
+    <string-array name="spinner">
+        <item>Meat</item>
+        <item>Chicken</item>
+        <item>Beverage</item>
+        <item>Dessert</item>
+    </string-array>
 </resources>

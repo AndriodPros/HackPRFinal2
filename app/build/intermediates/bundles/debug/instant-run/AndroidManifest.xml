@@ -32,6 +32,7 @@
         <activity android:name="com.example.cod5_.hackprfinal.Menu2" />
         <activity android:name="com.example.cod5_.hackprfinal.Waiter" />
         <activity android:name="com.example.cod5_.hackprfinal.MenuMod" />
+        <activity android:name="com.example.cod5_.hackprfinal.Add_Item" />
     </application>
 
 </manifest>

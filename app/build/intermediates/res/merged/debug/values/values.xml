@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="spinner">
+        <item>Meat</item>
+        <item>Chicken</item>
+        <item>Beverage</item>
+        <item>Dessert</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -222,7 +228,7 @@
     <string name="btnwaiter">Waiter</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="textmenu_options">Menu Options:</string>
-    <string name="textwelcome">Welcome</string>
+    <string name="textwelcome">Welcome!</string>
     <string name="waiter_text">Waiter Options:</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

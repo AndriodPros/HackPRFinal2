@@ -3,6 +3,7 @@
     package="com.example.cod5_.hackprfinal">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +24,8 @@
         </activity>
         <activity android:name=".Menu2" />
         <activity android:name=".Waiter" />
-        <activity android:name=".MenuMod"></activity>
+        <activity android:name=".MenuMod" />
+        <activity android:name=".Add_Item"></activity>
     </application>
 
 </manifest>

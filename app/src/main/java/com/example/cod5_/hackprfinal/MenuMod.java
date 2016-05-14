@@ -1,12 +1,26 @@
 package com.example.cod5_.hackprfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 
 public class MenuMod extends AppCompatActivity {
     private Button btnAddMenu;
-    private Button btnModMenu;
+    //private Button btnModMenu;
+
+    public void onclick() {
+        btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
+        btnAddMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addmenu = new Intent(MenuMod.this, Add_Item.class);
+                startActivity(addmenu);
+            }
+        });
+    }
+
 
 //    public void onclick() {
 //        btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
@@ -31,6 +45,6 @@ public class MenuMod extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_mod);
-     //   onclick();
+        onclick();
     }
 }
