@@ -5,7 +5,7 @@
     <string name="btnDisplayOrder">Display Unpaid Order</string>
     <string name="btnmenu_organizer">Menu Organizer</string>
     <string name="btnwaiter">Waiter</string>
-    <string name="textwelcome">Welcome</string>
+    <string name="textwelcome">Home</string>
     <string name="btnmodify_menu_item">Modify Menu Item</string>
     <string name="btnadd_new_menu_item">Add New Menu Item</string>
     <string name="textmenu_options">Menu Options:</string>
