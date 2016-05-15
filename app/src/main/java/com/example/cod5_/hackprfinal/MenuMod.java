@@ -9,42 +9,33 @@ import android.widget.Button;
 public class MenuMod extends AppCompatActivity {
     private Button btnAddMenu;
     //private Button btnModMenu;
+    public Menu_Organizer menu;
+    public  Manager manager;
 
     public void onclick() {
         btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
         btnAddMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = getIntent();
                 Intent addmenu = new Intent(MenuMod.this, Add_Item.class);
+                //addmenu.putExtra("Menu", menu); //pasar objeto de menu al activity 2
+                //addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(addmenu);
             }
         });
     }
 
 
-//    public void onclick() {
-//        btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
-//        btnAddMenu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent Add = new Intent(MenuMod.this, NewItem.class);
-//                startActivity(Add);
-//            }
-//        });
-//        btnModMenu = (Button) findViewById(R.id.btnModMenu);
-//        btnModMenu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent DisOrders = new Intent(MenuMod.this, ModItem.class);
-//                startActivity(DisOrders);
-//            }
-//        });
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_mod);
         onclick();
+
+        Intent i = getIntent();
+        //menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+        //manager = (Manager) i.getParcelableExtra("Manager");
+
     }
 }

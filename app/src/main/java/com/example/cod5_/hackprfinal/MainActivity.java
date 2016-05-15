@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnWaiter;
     private Button btnMenu;
-  //  public Menu_Organizer menu;
-   // public  Manager manager;
+    public Menu_Organizer menu;
+    public  Manager manager;
 
     public void onclick(){
         btnMenu= (Button) findViewById(R.id.btnMenu);
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent activity2= new Intent(MainActivity.this,MenuMod.class);
-               // activity2.putExtra("Menu", menu); //pasar objeto de menu al activity 2
-               // activity2.putExtra("Manager", manager); //pasar objeto de manager al activity 2
+                //activity2.putExtra("Menu", menu); //pasar objeto de menu al activity 2
+                //activity2.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(activity2);
             }
         });
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     @Override
@@ -44,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         onclick();
 
-      /*  // menu = new Menu_Organizer(); //ahora se pueden anadir menus al item
-        // manager = new Manager(10); //10 mesas para empezar
+         menu = new Menu_Organizer(); //ahora se pueden anadir menus al item
+         manager = new Manager(10); //10 mesas para empezar
 
         menu.New_Menu_Category("Meat");
         menu.New_Menu_Category("Chicken");
@@ -81,6 +80,6 @@ public class MainActivity extends AppCompatActivity {
         menu.New_Menu_Item("Sides", "Fries", "Crispy French Fries", 3.00f );
         menu.New_Menu_Item("Sides", "Baked Potato", "Hot Baked Potato", 3.50f );
         menu.New_Menu_Item("Sides", "Salad", "Fresh Caesar Salad", 3.25f);
-        menu.New_Menu_Item("Sides", "Rice and Beans", "Criollo Rice and Beans", 4.00f);*/
+        menu.New_Menu_Item("Sides", "Rice and Beans", "Criollo Rice and Beans", 4.00f);
     }
 }

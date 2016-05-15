@@ -12,15 +12,18 @@ import android.widget.ListView;
 
 public class Menu2 extends AppCompatActivity {
 
-    Intent i = getIntent();
-
-   // public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
- //   public Manager manager = (Manager) i.getParcelableExtra("Manager");
+    public Menu_Organizer menu;
+    public Manager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu2);
+
+        Intent i = getIntent();
+        //menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+        //manager = (Manager) i.getParcelableExtra("Manager");
+
         String [] menuItems = {"Meat", "Chicken", "Beverage", "Dessert"};
 
 
@@ -58,7 +61,6 @@ public class Menu2 extends AppCompatActivity {
 
 
                 }
-
             }
         });
 

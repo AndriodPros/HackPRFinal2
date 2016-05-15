@@ -11,16 +11,19 @@ import android.widget.ListView;
 
 public class SelectActivity extends AppCompatActivity {
     private static String [] items;
-    Intent i = getIntent();
-    //public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
-    //public Manager manager = (Manager) i.getParcelableExtra("Manager");
+    public Menu_Organizer menu;
+    public Manager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu2);
-        String [] menuItems = items;
+        setContentView(R.layout.activity_main);
 
+       //Intent i = getIntent();
+       //menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+       //manager = (Manager) i.getParcelableExtra("Manager");
+
+        String [] menuItems = items;
 
         final ListAdapter menuAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, menuItems);
         ListView menuListView = (ListView) findViewById(R.id.menuListView);
@@ -28,18 +31,18 @@ public class SelectActivity extends AppCompatActivity {
         menuListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               switch(position){
-                   case 1:
+                switch(position){
+                    case 1:
 
-                       break;
-                   case 2:
-                       break;
-                   case 3:
-                       break;
-                   case 4:
-                       break;
-                   default:
-
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    default:
+                        ;
 
                 }
             }
@@ -61,19 +64,6 @@ public class SelectActivity extends AppCompatActivity {
         SelectActivity.items = items;
     }
 
-//    private void _getLocation() {
-//        // Get the location manager
-//        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-//        Criteria criteria = new Criteria();
-//        String bestProvider = locationManager.getBestProvider(criteria, false);
-//        Location location = locationManager.getLastKnownLocation();
-//        try {
-//            lat = location.getLatitude();
-//            lon = location.getLongitude();
-//        } catch (NullPointerException e) {
-//            lat = -1.0;
-//            lon = -1.0;
-//        }
-//    }
+
 
 }
