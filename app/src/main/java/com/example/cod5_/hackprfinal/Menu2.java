@@ -35,17 +35,19 @@ public class Menu2 extends AppCompatActivity {
                 Intent tempMenu = new Intent(Menu2.this, SelectActivity.class);
                 switch(position+1){
                     case 1:
-
+                        int i=9;
 
                         String [] meat = {"Churrasco - 9.55$", "Sirloin - 11.00$", "Fillet Minion - 14.75$", "Ribs - 20.00$"};
                         SelectActivity.stringArray(meat);
                         startActivity(tempMenu);
                         break;
+
                     case 2:
                         String [] chicken = {"Al Ajillo - 9.55$", "Fried - 11.00$", "Spicy - 14.75$", "Jerk - 20.00$"};
                         SelectActivity.stringArray(chicken);
                         startActivity(tempMenu);
                         break;
+
                     case 3:
                         String [] beverages = {"Water - 2.55$", "Coke - 5.00$", "Wine - 15.75$", "Champagne - 20.00$"};
                         SelectActivity.stringArray(beverages);

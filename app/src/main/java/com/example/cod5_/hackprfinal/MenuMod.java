@@ -20,8 +20,8 @@ public class MenuMod extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = getIntent();
                 Intent addmenu = new Intent(MenuMod.this, Add_Item.class);
-                //addmenu.putExtra("Menu", menu); //pasar objeto de menu al activity 2
-                //addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
+                addmenu.putExtra("Menu_Organizer", menu); //pasar objeto de menu al activity 2
+                addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(addmenu);
 
             }

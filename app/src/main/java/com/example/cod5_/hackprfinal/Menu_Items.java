@@ -1,11 +1,13 @@
 package com.example.cod5_.hackprfinal;
 
+import java.util.jar.Attributes;
+
 /**
  * Created by cod5_ on 5/6/2016.
  */
 public class Menu_Items {
 
-    String Name = "";
+    String Name= "";
     String Description = "";
     float Price = 0.0f;
     String Category = "";

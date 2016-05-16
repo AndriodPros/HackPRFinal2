@@ -1,5 +1,6 @@
 package com.example.cod5_.hackprfinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 
 public class Add_Item extends AppCompatActivity {
    //buttons are declared in this section
+    Menu_Organizer menu;
+    Manager manager;
     Spinner spinner1;
     Button button;
     Button button2;
@@ -28,6 +31,11 @@ public class Add_Item extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__item);
+
+        Intent i = getIntent();
+        menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+        manager = (Manager) i.getParcelableExtra("Manager");
+
         spinner1 = (Spinner)findViewById(R.id.spinner);//find the spinner by id
         adapter = ArrayAdapter.createFromResource(this,R.array.spinner,android.R.layout.simple_spinner_item);//method for spinner
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);//view of spinner
@@ -65,9 +73,17 @@ public class Add_Item extends AppCompatActivity {
                         Log.v("Description", text_description.getText().toString());//description gettext
                         Log.v("Category", spinner1.getSelectedItem().toString()); //spinner gettext
                         Log.v("Price", text_price.getText().toString()); //price gettext
+
                         text_name.getText().clear();
                         text_description.getText().clear();
                         text_price.getText().clear();
+
+                        String name = text_name.getText().toString();
+                        String des = text_description.getText().toString();
+                        float price = Float.parseFloat(text_price.getText().toString());
+                        String cat = spinner1.getSelectedItem().toString();
+                        menu.New_Menu_Item(cat, des, name, price);
+
                     }
                 }
         );
