@@ -22,14 +22,6 @@ public class Waiter extends AppCompatActivity {
                 startActivity(intmenu);
             }
         });
-//        btnDisplayOrder = (Button) findViewById(R.id.btnDisplayOrder);
-//        btnDisplayOrder.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent DisOrders = new Intent(Waiter.this, Orders.class);
-//                startActivity(DisOrders);
-//            }
-//        });
     }
 
     @Override
