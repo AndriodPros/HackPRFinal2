@@ -8,10 +8,9 @@ import android.widget.Button;
 
 public class Waiter extends AppCompatActivity {
     private Button btnIntMenu;
-    private Button btnDisplayOrder;
-    Intent i = getIntent();
-    public Menu_Organizer menu = (Menu_Organizer) i.getParcelableExtra("Menu");
-    public Manager manager = (Manager) i.getParcelableExtra("Manager");
+   // private Button btnDisplayOrder;
+    public Menu_Organizer menu;
+    public Manager manager;
 
 
     public void onclick() {
@@ -38,5 +37,8 @@ public class Waiter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter);
         onclick();
+        Intent i = getIntent();
+         menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+        manager = (Manager) i.getParcelableExtra("Manager");
     }
 }

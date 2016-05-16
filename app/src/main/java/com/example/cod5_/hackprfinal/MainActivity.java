@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnWaiter;
     private Button btnMenu;
-  //  public Menu_Organizer menu;
-   // public  Manager manager;
+     public Menu_Organizer menu;
+    public  Manager manager;
 
     public void onclick(){
         btnMenu= (Button) findViewById(R.id.btnMenu);
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent activity2= new Intent(MainActivity.this,MenuMod.class);
-               // activity2.putExtra("Menu", menu); //pasar objeto de menu al activity 2
-               // activity2.putExtra("Manager", manager); //pasar objeto de manager al activity 2
+               activity2.putExtra("Menu", menu); //pasar objeto de menu al activity 2
+                activity2.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(activity2);
             }
         });
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent activity2= new Intent(MainActivity.this,Waiter.class);
+                activity2.putExtra("Menu", menu); //pasar objeto de menu al activity 2
+                activity2.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(activity2);
             }
         });

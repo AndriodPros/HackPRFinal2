@@ -13,25 +13,37 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Restauranto"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.cod5_.hackprfinal.MainActivity" >
+        <activity
+            android:name="com.example.cod5_.hackprfinal.MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.cod5_.hackprfinal.SelectActivity" >
+        <activity
+            android:name="com.example.cod5_.hackprfinal.SelectActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="androi" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.cod5_.hackprfinal.Menu2" />
-        <activity android:name="com.example.cod5_.hackprfinal.Waiter" />
-        <activity android:name="com.example.cod5_.hackprfinal.MenuMod" />
-        <activity android:name="com.example.cod5_.hackprfinal.Add_Item" />
+        <activity
+            android:name="com.example.cod5_.hackprfinal.Menu2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.cod5_.hackprfinal.Waiter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.cod5_.hackprfinal.MenuMod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.cod5_.hackprfinal.Add_Item"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
