@@ -10,7 +10,8 @@
         android:label="Restauranto"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,20 +19,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectActivity"
+        <activity
+            android:name=".SelectActivity"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="androi"/>
+                <action android:name="androi" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu2"
-            android:screenOrientation= "portrait"/>
-        <activity android:name=".Waiter"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MenuMod"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Add_Item"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Menu2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Waiter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuMod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Add_Item"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Recibo_Unpaid"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
     </application>
 
 </manifest>

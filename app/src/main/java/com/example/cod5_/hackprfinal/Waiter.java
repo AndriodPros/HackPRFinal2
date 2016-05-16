@@ -8,13 +8,14 @@ import android.widget.Button;
 
 public class Waiter extends AppCompatActivity {
     private Button btnIntMenu;
-   // private Button btnDisplayOrder;
+    private Button btnDisplayOrder;
     public Menu_Organizer menu;
     public Manager manager;
 
 
     public void onclick() {
         btnIntMenu = (Button) findViewById(R.id.btnInterMenu);
+        btnDisplayOrder = (Button) findViewById(R.id.btnDisplayOrder);
         btnIntMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,14 +23,14 @@ public class Waiter extends AppCompatActivity {
                 startActivity(intmenu);
             }
         });
-//        btnDisplayOrder = (Button) findViewById(R.id.btnDisplayOrder);
-//        btnDisplayOrder.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent DisOrders = new Intent(Waiter.this, Orders.class);
-//                startActivity(DisOrders);
-//            }
-//        });
+
+       btnDisplayOrder.setOnClickListener(new View.OnClickListener() {
+          @Override
+           public void onClick(View v) {
+              Intent DisOrders = new Intent(Waiter.this, Recibo_Unpaid.class);
+                startActivity(DisOrders);
+          }
+        });
     }
 
     @Override
