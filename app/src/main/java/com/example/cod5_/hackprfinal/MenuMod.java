@@ -8,23 +8,27 @@ import android.widget.Button;
 
 public class MenuMod extends AppCompatActivity {
     private Button btnAddMenu;
-    //private Button btnModMenu;
+   // private Button btnModMenu;
     public Menu_Organizer menu;
     public  Manager manager;
 
     public void onclick() {
         btnAddMenu = (Button) findViewById(R.id.btnAddMenu);
+
         btnAddMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = getIntent();
                 Intent addmenu = new Intent(MenuMod.this, Add_Item.class);
-                //addmenu.putExtra("Menu", menu); //pasar objeto de menu al activity 2
-                //addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
+                addmenu.putExtra("Menu_Organizer", menu); //pasar objeto de menu al activity 2
+                addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(addmenu);
+
             }
         });
+
     }
+
 
 
     @Override

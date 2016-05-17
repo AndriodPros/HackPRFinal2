@@ -41,7 +41,7 @@ public class Menu2 extends AppCompatActivity {
                 Intent tempMenu = new Intent(Menu2.this, SelectActivity.class);
                 switch(position+1){
                     case 1:
-
+                        int i=9;
 
                        ArrayList<String>  meat = new ArrayList<String>();
 
@@ -63,6 +63,7 @@ public class Menu2 extends AppCompatActivity {
 //                        startActivity(tempMenu);
                         //startActivity(tempMenu);
                         break;
+
                     case 2:
                         ArrayList<String>  Chicken = new ArrayList<String>();
                         for(int i = 0; i<menu.Food.size(); i++){
@@ -90,6 +91,7 @@ public class Menu2 extends AppCompatActivity {
 //                        SelectActivity.stringArray(chicken);
 //                        startActivity(tempMenu);
                         break;
+
                     case 3:
                         ArrayList<String>  beverages = new ArrayList<String>();
                         for(int i = 0; i<menu.Food.size(); i++){

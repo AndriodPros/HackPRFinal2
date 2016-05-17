@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Leonard Molano\Dropbox\Android\Android Proyect\HackPRFinal2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d096f48b746b6f1fc129fffa55cef1c0139a5b2e">
+        <dex dex="C:\Users\Leonard Molano\Dropbox\Android\Android Proyect\HackPRFinal2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_aab3a7505d47262c906787b21e9f98c50920249d\classes.dex" />
+    </item>
+
+</items>
