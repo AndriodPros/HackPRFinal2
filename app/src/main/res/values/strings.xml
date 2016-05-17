@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HackPRFinal</string>
     <string name="waiter_text">Waiter Options:</string>
-    <string name="btn_intmenutext">Interactive Menu</string>
+    <string name="btn_intmenutext">New Receipt</string>
     <string name="btnDisplayOrder">Display Unpaid Order</string>
     <string name="btnmenu_organizer">Menu Organizer</string>
     <string name="btnwaiter">Waiter</string>

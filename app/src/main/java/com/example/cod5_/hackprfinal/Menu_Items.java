@@ -1,9 +1,11 @@
 package com.example.cod5_.hackprfinal;
 
+import java.io.Serializable;
+
 /**
  * Created by cod5_ on 5/6/2016.
  */
-public class Menu_Items {
+public class Menu_Items implements Serializable {
 
     String Name = "";
     String Description = "";

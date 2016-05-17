@@ -44,6 +44,10 @@
         <activity
             android:name="com.example.cod5_.hackprfinal.Add_Item"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.cod5_.hackprfinal.Recibo_Unpaid"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

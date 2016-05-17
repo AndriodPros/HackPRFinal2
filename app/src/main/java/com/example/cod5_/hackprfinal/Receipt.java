@@ -78,6 +78,7 @@ public class Receipt
 	public String Print_Receipt(){
 
         this.final_Receipt = "---------------------------\n"
+                            + " HTL Kitchen\n"
                              +" " + this.Name_Waiter + ", Table: " + this.Table_ID + "\n";
         for(int i = 0; i < this.Orders.size(); i++){
             this.final_Receipt += this.Orders.get(i).Name + " " + this.Orders.get(i).Price + "$\n";

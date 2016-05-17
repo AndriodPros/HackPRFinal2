@@ -11,10 +11,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 public class Add_Item extends AppCompatActivity {
    //buttons are declared in this section
+   // Menu_Organizer menu;
+    //Manager manager;
     Spinner spinner1;
     Button button;
     Button button2;
@@ -28,7 +28,12 @@ public class Add_Item extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__item);
-        spinner1 = (Spinner)findViewById(R.id.spinner);//find the spinner by id
+
+       // Intent i = getIntent();
+       // menu = (Menu_Organizer) i.getParcelableExtra("Menu");
+        //manager = (Manager) i.getParcelableExtra("Manager");
+
+        spinner1 = (Spinner)findViewById(R.id.spinner_categories);//find the spinner by id
         adapter = ArrayAdapter.createFromResource(this,R.array.spinner,android.R.layout.simple_spinner_item);//method for spinner
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);//view of spinner
         spinner1.setAdapter(adapter); //set spinner
@@ -47,12 +52,12 @@ public class Add_Item extends AppCompatActivity {
         });
 
 
-        button = (Button) findViewById(R.id.button);//find the button by id
-        button2 = (Button) findViewById(R.id.button2);//find clear button
-        button3 = (Button) findViewById(R.id.button3);
-        text_name = (EditText) findViewById(R.id.editText);//find the EditText1
-        text_description = (EditText) findViewById(R.id.editText2);//find EditText2
-        text_price = (EditText) findViewById(R.id.editText3);//find EditText3
+        button = (Button) findViewById(R.id.add_button);//find the button by id
+        button2 = (Button) findViewById(R.id.clear_button);//find clear button
+        button3 = (Button) findViewById(R.id.cancel_button);//find cancel button
+        text_name = (EditText) findViewById(R.id.name_text);//find the EditText1
+        text_description = (EditText) findViewById(R.id.description_text);//find EditText2
+        text_price = (EditText) findViewById(R.id.price_text);//find EditText3
 
         button.setOnClickListener( //this is the action made when you press the button
                 new View.OnClickListener()
@@ -65,9 +70,17 @@ public class Add_Item extends AppCompatActivity {
                         Log.v("Description", text_description.getText().toString());//description gettext
                         Log.v("Category", spinner1.getSelectedItem().toString()); //spinner gettext
                         Log.v("Price", text_price.getText().toString()); //price gettext
+
                         text_name.getText().clear();
                         text_description.getText().clear();
                         text_price.getText().clear();
+
+                       // String name = text_name.getText().toString();
+                        //String des = text_description.getText().toString();
+                        //float price = Float.parseFloat(text_price.getText().toString());
+                        //String cat = spinner1.getSelectedItem().toString();
+                       // menu.New_Menu_Item(cat, des, name, price);
+
                     }
                 }
         );

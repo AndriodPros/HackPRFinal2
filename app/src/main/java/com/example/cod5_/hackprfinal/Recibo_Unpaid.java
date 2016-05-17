@@ -1,17 +1,17 @@
 package com.example.cod5_.hackprfinal;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Waiter extends AppCompatActivity {
-    private Button btnIntMenu;
-   // private Button btnDisplayOrder;
-    public Menu_Organizer menu;
-   public Manager manager;
+public class Recibo_Unpaid extends AppCompatActivity {
 
+    private Button btnIntMenu;
+    // private Button btnDisplayOrder;
+    public Menu_Organizer menu;
+    public Manager manager;
 
     public void onclick() {
         /*btnIntMenu = (Button) findViewById(R.id.btnRecibo);
@@ -33,11 +33,11 @@ public class Waiter extends AppCompatActivity {
 //            }
 //        });
 
-        btnIntMenu = (Button) findViewById(R.id.btnRecibo);
+        btnIntMenu = (Button) findViewById(R.id.cancel_button);
         btnIntMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intmenu = new Intent(Waiter.this, Recibo_Unpaid.class);
+                Intent intmenu = new Intent(Recibo_Unpaid.this, Menu2.class);
                 intmenu.putExtra("Menu", menu); //pasar objeto de menu al activity 2
                 intmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
                 startActivity(intmenu);
@@ -48,8 +48,8 @@ public class Waiter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_waiter);
-       Intent i = getIntent();
+        setContentView(R.layout.activity_recibo__unpaid);
+        Intent i = getIntent();
         Bundle b=i.getExtras();
         menu = (Menu_Organizer) i.getSerializableExtra("Menu");
         manager = (Manager) i.getSerializableExtra("Manager");
