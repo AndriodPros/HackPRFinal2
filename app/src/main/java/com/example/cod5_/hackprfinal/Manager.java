@@ -29,6 +29,14 @@ public class Manager implements Serializable
         return temp;
     } //Displays All of the orders from today
 
+    public void addReceipt(Receipt r){
+        Customers.add(r);
+    }
+
+    public int getReceiptCount(){
+        return Customers.size();
+    }
+
     public float Reports(){
         float cuadre = 0.0f;
 

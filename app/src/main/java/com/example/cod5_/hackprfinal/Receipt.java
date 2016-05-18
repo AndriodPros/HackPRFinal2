@@ -9,7 +9,8 @@ import java.util.ArrayList;
 */
 public class Receipt
 {
-	float Sub_Total;
+
+	public static float Sub_Total;
     float Tip;
 	String Name_Waiter;
 	int Table_ID;
@@ -75,7 +76,39 @@ public class Receipt
         return this.Sub_Total + this.Tip + this.final_Tax;
     } //Adds up everything for final total
 
-	public String Print_Receipt(){
+    public static void addToSubTotal(float value){
+        Sub_Total += value;
+    }
+
+    public static void resetSubTotal(){
+        Sub_Total = 0.0f;
+    }
+
+    public Boolean getPaid() {
+        return Paid;
+    }
+
+    public void setPaid(Boolean paid) {
+        Paid = paid;
+    }
+
+    public String getTime_Paid() {
+        return Time_Paid;
+    }
+
+    public void setTime_Paid(String time_Paid) {
+        Time_Paid = time_Paid;
+    }
+
+    public ArrayList<Menu_Items> getOrders() {
+        return Orders;
+    }
+
+    public void setOrders(ArrayList<Menu_Items> orders) {
+        Orders = orders;
+    }
+
+    public String Print_Receipt(){
 
         this.final_Receipt = "---------------------------\n"
                             + " HTL Kitchen\n"

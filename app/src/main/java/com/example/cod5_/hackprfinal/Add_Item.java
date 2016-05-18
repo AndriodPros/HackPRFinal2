@@ -1,5 +1,6 @@
 package com.example.cod5_.hackprfinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,8 @@ public class Add_Item extends AppCompatActivity {
    //buttons are declared in this section
    // Menu_Organizer menu;
     //Manager manager;
+    public Menu_Organizer menu;
+    public Manager manager;
     Spinner spinner1;
     Button button;
     Button button2;
@@ -22,6 +25,8 @@ public class Add_Item extends AppCompatActivity {
     EditText text_name;
     EditText text_description;
     EditText text_price;
+    Spinner categorySpinner;
+    String categoryText;
     ArrayAdapter<CharSequence> adapter; //this is an ArrayAdapter to get text from array of string.xml found on values folder
 
     @Override
@@ -29,9 +34,10 @@ public class Add_Item extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__item);
 
-       // Intent i = getIntent();
-       // menu = (Menu_Organizer) i.getParcelableExtra("Menu");
-        //manager = (Manager) i.getParcelableExtra("Manager");
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+        menu = (Menu_Organizer) i.getSerializableExtra("Menu_Organizer");
+        manager = (Manager) i.getSerializableExtra("Manager");
 
         spinner1 = (Spinner)findViewById(R.id.spinner_categories);//find the spinner by id
         adapter = ArrayAdapter.createFromResource(this,R.array.spinner,android.R.layout.simple_spinner_item);//method for spinner
@@ -58,6 +64,8 @@ public class Add_Item extends AppCompatActivity {
         text_name = (EditText) findViewById(R.id.name_text);//find the EditText1
         text_description = (EditText) findViewById(R.id.description_text);//find EditText2
         text_price = (EditText) findViewById(R.id.price_text);//find EditText3
+        categorySpinner =(Spinner) findViewById(R.id.spinner_categories);
+        categoryText = categorySpinner.getSelectedItem().toString();
 
         button.setOnClickListener( //this is the action made when you press the button
                 new View.OnClickListener()
@@ -70,6 +78,13 @@ public class Add_Item extends AppCompatActivity {
                         Log.v("Description", text_description.getText().toString());//description gettext
                         Log.v("Category", spinner1.getSelectedItem().toString()); //spinner gettext
                         Log.v("Price", text_price.getText().toString()); //price gettext
+
+                        //get current spinner value
+                        categoryText = categorySpinner.getSelectedItem().toString();
+                        //create the new item
+                        Menu_Items item = new Menu_Items(text_name.getText().toString(),categoryText,text_description.getText().toString(),Float.parseFloat(text_price.getText().toString()));
+                        //add the new item
+                        MainActivity.menu.Food.add(item);
 
                         text_name.getText().clear();
                         text_description.getText().clear();
@@ -98,7 +113,12 @@ public class Add_Item extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent i = getIntent();
+                Intent addmenu = new Intent(Add_Item.this, MenuMod.class);
+                addmenu.putExtra("Menu_Organizer", menu); //pasar objeto de menu al activity 2
+                addmenu.putExtra("Manager", manager); //pasar objeto de manager al activity 2
+                startActivity(addmenu);
+                //onBackPressed();
             }
         });
 

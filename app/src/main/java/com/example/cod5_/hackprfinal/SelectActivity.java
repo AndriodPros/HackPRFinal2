@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.util.Objects;
+
 public class SelectActivity extends AppCompatActivity {
     private static String [] items;
    // Intent i = getIntent();
@@ -20,14 +22,27 @@ public class SelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu2);
         String [] menuItems = items;
+        Intent i = getIntent();
+        //int id = (int)i.getSerializableExtra("Table_id");
 
 
         final ListAdapter menuAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, menuItems);
-        ListView menuListView = (ListView) findViewById(R.id.menuListView);
+        final ListView menuListView = (ListView) findViewById(R.id.menuListView);
         menuListView.setAdapter(menuAdapter);
         menuListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String itemName = menuListView.getSelectedItem().toString();
+                /*for(int i = 0; i < MainActivity.menu.Food.size(); i++){
+                    if(Objects.equals(itemName,MainActivity.menu.Food.get(i).getName())){
+                        for(int n = 0; n < MainActivity.manager.Customers.size(); n++){
+                            if(MainActivity.manager.Customers.get(n).Table_ID == Recibo_Unpaid.id){
+                                MainActivity.manager.Customers.get(n).addToSubTotal(MainActivity.menu.Food.get(i).getPrice());
+                                MainActivity.manager.Customers.get(n).Add_Item(MainActivity.menu.Food.get(i));
+                            }
+                        }
+                    }
+                }*/
                switch(position){
                    case 1:
 
